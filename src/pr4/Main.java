@@ -11,7 +11,6 @@ import javax.swing.*;
 
 import ecosistems.*;
 import animals.*;
-import animals.fox.DesertFox;
 
 
 public class Main {
@@ -19,11 +18,12 @@ public class Main {
     static JFrame frame = new JFrame("DAP - Práctica 4: Factorías");
 
     // Declaración de los paneles
+    // Los botones y las fotos irán en paneles separados dentro de la ventana
     static JPanel ecoPanel = new JPanel();
-    static JPanel animalPanel = new JPanel();
     static JPanel imagePanel = new JPanel();
 
     // Declaración de los botones de ecosistema
+    // En función del botón que seleccione el usuario, se mostrarán unos animales u otros
     static JButton desertButton = new JButton("Desierto");
     static JButton forestButton = new JButton("Bosque");
     static JButton jungleButton = new JButton("Selva");
@@ -31,24 +31,16 @@ public class Main {
     static JButton savannaButton = new JButton("Savana");
     static  JButton tundraButton = new JButton("Tundra");
 
-    // Declaración de los botones de animales
-    static JButton bearButton = new JButton("Oso");
-    static JButton crocodileButton = new JButton("Cocodrilo");
-    static JButton eagleButton = new JButton("Eagle");
-    static JButton foxButton = new JButton("Zorro");
-    static JButton lionButton = new JButton("León");
-
     // Declaración de fábrica de ecosistemas y del animal a mostrar
     static EcosystemFactory factory = null;
     static Animal animal = null;
 
     public Main() {
-        // Frame configuration
+        // Configuración de la ventana
         frame.setSize(900, 800);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //frame.setLayout((LayoutManager) new FlowLayout());
 
-        // Eco panel configuration
+        // Configuración del panel de los botones de ecosistema
         ecoPanel.add(desertButton);
         ecoPanel.add(forestButton);
         ecoPanel.add(jungleButton);
@@ -59,6 +51,7 @@ public class Main {
         frame.add(ecoPanel);
 
         // Action listeners
+        // Aquí se define lo que ocurrirá cuando se pulse cada botón
         desertButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
