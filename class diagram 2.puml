@@ -1,0 +1,109 @@
+@startuml
+class pr4.Main {
++ {static} void main(String[])
+}
+class pr4.animals.fox.TundraFox {
++ void showPicture()
+}
+abstract class pr4.animals.lion.Lion {
++ {abstract}void showPicture()
+}
+class pr4.animals.bear.MountainBear {
++ void showPicture()
+}
+class pr4.animals.fox.SavannaFox {
++ void showPicture()
+}
+abstract class pr4.animals.eagle.Eagle {
++ {abstract}void showPicture()
+}
+interface pr4.animals.Animal {
+~ void showPicture()
+}
+class pr4.animals.bear.ForestBear {
++ void showPicture()
+}
+class pr4.animals.lion.DesertLion {
++ void showPicture()
+}
+class pr4.ecosistems.MountainFactory {
++ Animal[] createEcosystem()
+}
+class pr4.animals.fox.DesertFox {
++ void showPicture()
+}
+class pr4.animals.eagle.DesertEagle {
++ void showPicture()
+}
+abstract class pr4.animals.fox.Fox {
++ {abstract}void showPicture()
+}
+class pr4.ecosistems.DesertFactory {
++ Animal[] createEcosystem()
+}
+abstract class pr4.ecosistems.EcosystemFactory {
++ {abstract}Animal[] createEcosystem()
+}
+class pr4.animals.eagle.MountainEagle {
++ void showPicture()
+}
+class pr4.animals.lion.JungleLion {
++ void showPicture()
+}
+class pr4.animals.crocodile.SavannaCrocodile {
++ void showPicture()
+}
+class pr4.animals.fox.ForestFox {
++ void showPicture()
+}
+class pr4.animals.lion.SavannaLion {
++ void showPicture()
+}
+abstract class pr4.animals.crocodile.Crocodile {
++ {abstract}void showPicture()
+}
+class pr4.ecosistems.JungleFactory {
++ Animal[] createEcosystem()
+}
+class pr4.ecosistems.ForestFactory {
++ Animal[] createEcosystem()
+}
+class pr4.animals.crocodile.JungleCrocodile {
++ void showPicture()
+}
+class pr4.ecosistems.SavannaFactory {
++ Animal[] createEcosystem()
+}
+class pr4.ecosistems.TundraFactory {
++ Animal[] createEcosystem()
+}
+abstract class pr4.animals.bear.Bear {
++ {abstract}void showPicture()
+}
+
+
+pr4.animals.fox.Fox <|-- pr4.animals.fox.TundraFox
+pr4.animals.Animal <|.. pr4.animals.lion.Lion
+pr4.animals.bear.Bear <|-- pr4.animals.bear.MountainBear
+pr4.animals.fox.Fox <|-- pr4.animals.fox.SavannaFox
+pr4.animals.Animal <|.. pr4.animals.eagle.Eagle
+pr4.animals.bear.Bear <|-- pr4.animals.bear.ForestBear
+pr4.animals.lion.Lion <|-- pr4.animals.lion.DesertLion
+pr4.ecosistems.EcosystemFactory <|-- pr4.ecosistems.MountainFactory
+pr4.animals.fox.Fox <|-- pr4.animals.fox.DesertFox
+pr4.animals.eagle.Eagle <|-- pr4.animals.eagle.DesertEagle
+pr4.animals.Animal <|.. pr4.animals.fox.Fox
+pr4.ecosistems.EcosystemFactory <|-- pr4.ecosistems.DesertFactory
+pr4.animals.eagle.Eagle <|-- pr4.animals.eagle.MountainEagle
+pr4.animals.lion.Lion <|-- pr4.animals.lion.JungleLion
+pr4.animals.crocodile.Crocodile <|-- pr4.animals.crocodile.SavannaCrocodile
+pr4.animals.fox.Fox <|-- pr4.animals.fox.ForestFox
+pr4.animals.lion.Lion <|-- pr4.animals.lion.SavannaLion
+pr4.animals.Animal <|.. pr4.animals.crocodile.Crocodile
+pr4.ecosistems.EcosystemFactory <|-- pr4.ecosistems.JungleFactory
+pr4.ecosistems.EcosystemFactory <|-- pr4.ecosistems.ForestFactory
+pr4.animals.crocodile.Crocodile <|-- pr4.animals.crocodile.JungleCrocodile
+pr4.ecosistems.EcosystemFactory <|-- pr4.ecosistems.SavannaFactory
+pr4.ecosistems.EcosystemFactory <|-- pr4.ecosistems.TundraFactory
+pr4.animals.Animal <|.. pr4.animals.bear.Bear
+@enduml
