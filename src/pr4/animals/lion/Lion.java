@@ -5,5 +5,6 @@ import java.io.File;
 import animals.Animal;
 
 public abstract class Lion extends Animal {
-    public abstract File showPicture();
+    public abstract String getName();
+    public abstract String showPicture();
 }

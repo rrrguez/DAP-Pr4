@@ -3,10 +3,13 @@ package animals.lion;
 import java.io.File;
 
 public class DesertLion extends Lion {
+
+    public String getName(){
+        return "South African Lion";
+    }
     @Override
-    public File showPicture() {
+    public String showPicture() {
         // Obtenemos la ruta de la imagen
-        String imagePath = "/src/images/desert_lion.jpeg";
-        return new File (imagePath);
+        return "DAP-Pr4-master/src/images/desert_lion.jpg";
     }
 }
