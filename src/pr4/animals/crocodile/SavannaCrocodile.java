@@ -3,9 +3,10 @@ package animals.crocodile;
 import java.io.File;
 
 public class SavannaCrocodile extends Crocodile {
+    public  String getName(){ return "African Crocodile";};
+
     @Override
-    public File showPicture() {
-      String imagePath = "src/images/savanna_crocodrile.jpeg";
-      return new File(imagePath);
+    public String showPicture() {
+      return "DAP-Pr4-master/src/images/savannah_crocodile.jpg";
     }
 }
