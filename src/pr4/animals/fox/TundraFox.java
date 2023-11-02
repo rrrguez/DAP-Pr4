@@ -4,8 +4,9 @@ import java.io.File;
 
 public class TundraFox extends Fox {
     @Override
-    public File showPicture() {
-        String imagePath = "/src/images/artic_fox.jpeg";
-        return new File(imagePath);
+    public String showPicture() {
+        return "DAP-Pr4-master/src/images/tundra_fox.jpg";
     }
+    public  String getName(){ return "Artic Fox";};
+
 }

@@ -5,10 +5,11 @@ import java.io.File;
 
 public class SavannaFox extends Fox {
     @Override
-    public File showPicture() {
+    public String showPicture() {
         // Obtenemos la ruta de la imagen
-        String imagePath = "/src/images/savannah_fox.jpeg";
-        return new File(imagePath);
+        return "DAP-Pr4-master/src/images/savannah_fox.jpg";
     }
+    public  String getName(){ return "Bengal fox";};
+
 }
 

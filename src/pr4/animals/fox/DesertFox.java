@@ -3,10 +3,12 @@ package animals.fox;
 import java.io.File;
 
 public class DesertFox extends Fox {
+    public String getName(){
+        return "Fennec fox";
+    }
     @Override
-    public File showPicture() {
+    public String showPicture() {
         // Obtenemos la ruta de la imagen
-        String imagePath = "/src/images/desert_fox.jpg";
-        return new File(imagePath);
+        return "DAP-Pr4-master/src/images/desert_fox.jpg";
     }
 }
